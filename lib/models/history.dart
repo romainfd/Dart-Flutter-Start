@@ -6,9 +6,22 @@ class History extends ChangeNotifier {
   List<WordPair> _historyItems = [WordPair.random()];
   GlobalKey? listKey;
 
+  /// The list of generated items.
   List<WordPair> get items => _historyItems;
+
+  /// The current [WordPair] being displayed.
   WordPair get current => _historyItems[0];
 
+  /// Adds a new [WordPair] to the list of generated items.
+  ///
+  /// ```dart
+  /// var history = History();
+  /// var initialCurrent = history.current;
+  /// var initialLength = history.items.length;
+  /// history.getNext();
+  /// expect(history.items.length - initialLength, 1);
+  /// expect(history.current, isNot(initialCurrent));
+  /// ```
   void getNext() {
     var animatedList = listKey?.currentState as AnimatedListState?;
     animatedList?.insertItem(0);
