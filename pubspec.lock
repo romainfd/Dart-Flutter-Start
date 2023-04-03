@@ -226,6 +226,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.1.1"
+  markdown:
+    dependency: "direct dev"
+    description:
+      name: markdown
+      sha256: d95a9d12954aafc97f984ca29baaa7690ed4d9ec4140a23ad40580bcdb6c87f5
+      url: "https://pub.dev"
+    source: hosted
+    version: "7.0.2"
   matcher:
     dependency: transitive
     description:

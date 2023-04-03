@@ -25,6 +25,7 @@ dev_dependencies:
   flutter_driver:
     sdk: flutter
   test: ^1.22.0
+  markdown: ^7.0.2
 
 flutter:
   uses-material-design: true
